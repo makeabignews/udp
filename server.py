@@ -5,7 +5,7 @@ def udp_server(address):
     sock = socket(AF_INET, SOCK_DGRAM)
     sock.bind(address)
     while True:
-        msg, addr = sock.recvfrom(3001)
+        msg, addr = sock.recvfrom(500)
         print('message:%s from %s' % (msg, addr))
         resp = time.ctime()
         #sock.sendto(resp.encode('ascii'), addr)
